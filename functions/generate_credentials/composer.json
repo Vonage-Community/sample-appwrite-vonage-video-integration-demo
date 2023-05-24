@@ -1,0 +1,21 @@
+{
+    "name": "vonage_appwrite/generate_credentials",
+    "description": "A function to generate Vonage Video credentials",
+    "type": "project",
+    "require": {
+        "opentok/opentok": "^4.13",
+        "appwrite/appwrite": "^8.0"
+    },
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "VonageAppwrite\\GenerateCredentials\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chris Tankersley",
+            "email": "chris.tankersley@vonage.com"
+        }
+    ]
+}

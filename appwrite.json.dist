@@ -1,0 +1,52 @@
+{
+    "projectId": "",
+    "projectName": "Vonage Video Demo",
+    "functions": [
+        {
+            "$id": "generate-creds",
+            "name": "Generate Video Credentials",
+            "runtime": "php-8.0",
+            "path": "functions/generate_credentials",
+            "entrypoint": "index.php",
+            "ignore": [
+                "vendor",
+                "composer.lock"
+            ],
+            "execute": [
+                "users"
+            ],
+            "variables": {
+                "VONAGE_VIDEO_API_KEY": "",
+                "VONAGE_VIDEO_API_SECRET": "",
+                "APPWRITE_FUNCTION_API_KEY": ""
+            }
+        }
+    ],
+    "databases": [
+        {
+            "$id": "video-demo",
+            "name": "video-demo"
+        }
+    ],
+    "collections": [
+        {
+            "$id": "sessions",
+            "name": "sessions",
+            "databaseId": "video-demo",
+            "enabled": true,
+            "$permissions": [
+                "read(\"users\")"
+            ],
+            "attributes": [
+                {
+                    "key": "session_id",
+                    "type": "string",
+                    "status": "available",
+                    "required": true,
+                    "array": false,
+                    "size": 255
+                }
+            ]
+        }
+    ]
+}
